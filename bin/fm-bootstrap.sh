@@ -114,6 +114,8 @@ DATA="${FM_DATA_OVERRIDE:-$FM_HOME/data}"
 . "$SCRIPT_DIR/fm-x-lib.sh"
 # shellcheck source=bin/fm-backend.sh disable=SC1091
 . "$SCRIPT_DIR/fm-backend.sh"
+# shellcheck source=bin/fm-forge-lib.sh disable=SC1091
+. "$SCRIPT_DIR/fm-forge-lib.sh"
 
 fleet_sync_origin_backed_project_count() {
   local count proj
@@ -527,7 +529,14 @@ missing_tool_diagnostic() {
 # fm_backend_required_tools (bin/fm-backend.sh). So a herdr/zellij/cmux home is
 # never told tmux is missing, and only orca drops treehouse. A backend value with
 # no verified dependency set is reported before the universal checks continue.
-COMMON_TOOLS="node git gh no-mistakes gh-axi chrome-devtools-axi lavish-axi tasks-axi quota-axi"
+COMMON_TOOLS="node git no-mistakes chrome-devtools-axi lavish-axi tasks-axi quota-axi"
+FORGE_PROVIDERS_SEEN=$(fm_forge_scan_registered_projects "$PROJECTS" | awk '{print $2}' | sort -u)
+if printf '%s\n' "$FORGE_PROVIDERS_SEEN" | grep -qx github; then
+  COMMON_TOOLS="$COMMON_TOOLS gh gh-axi"
+fi
+if printf '%s\n' "$FORGE_PROVIDERS_SEEN" | grep -qx gitlab; then
+  COMMON_TOOLS="$COMMON_TOOLS glab"
+fi
 BACKEND=$(fm_backend_name)
 BACKEND_VALID=1
 if ! BACKEND_TOOLS=$(fm_backend_required_tools "$BACKEND"); then
@@ -881,7 +890,20 @@ fi
 if command -v tasks-axi >/dev/null 2>&1 && ! fm_tasks_axi_compatible; then
   echo "MISSING: tasks-axi (install: $(install_cmd tasks-axi))"
 fi
-gh auth status >/dev/null 2>&1 || echo "NEEDS_GH_AUTH"
+FORGE_AUTH_CHECKED=""
+while read -r _proj_id _proj_provider _proj_host; do
+  [ -n "${_proj_provider:-}" ] || continue
+  case "$_proj_provider" in
+    github|gitlab) : ;;
+    *) continue ;;
+  esac
+  _pair="$_proj_provider:${_proj_host:-}"
+  case " $FORGE_AUTH_CHECKED " in
+    *" $_pair "*) continue ;;
+  esac
+  FORGE_AUTH_CHECKED="$FORGE_AUTH_CHECKED $_pair"
+  fm_forge_check_auth "$_proj_provider" "${_proj_host:-}"
+done <<< "$(fm_forge_scan_registered_projects "$PROJECTS")"
 # Worktree-tangle check: the firstmate primary checkout (FM_ROOT) must sit on its
 # default branch, not a feature branch (see fm-tangle-lib.sh). Scoped to the
 # primary only; detached-HEAD worktrees and secondmate homes never trip it.
