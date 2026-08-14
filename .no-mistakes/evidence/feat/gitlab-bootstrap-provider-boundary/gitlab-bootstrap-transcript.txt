@@ -1,0 +1,5 @@
+GitLab-only bootstrap (network checks skipped):
+MISSING: treehouse (install: curl -fsSL https://kunchenguid.github.io/treehouse/install.sh | sh)
+MISSING: tasks-axi (install: npm install -g tasks-axi)
+gh present on test PATH: no
+glab present on test PATH: /var/folders/3h/vfmjjwc93tv064dwgc2n6qdm0000gn/T/tmp.0X98lkzLKr/bin/glab
