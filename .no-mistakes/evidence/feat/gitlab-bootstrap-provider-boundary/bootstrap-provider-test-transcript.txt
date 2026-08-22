@@ -1,0 +1,64 @@
+$ bash tests/.targeted-bootstrap.test.sh
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap applies provider-specific CLI and host-scoped auth policy
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap keeps origin-only local semantics and owns forge remediation
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap: FM_BOOTSTRAP_NETWORK partitions one run into local and network halves
+exit=0
+
+$ bash tests/fm-startup-network.test.sh
+ok - fm-startup-network: wait fails when no deferred stage publishes before its deadline
+ok - fm-startup-network: start returns immediately and never holds the caller's stdout open
+ok - fm-startup-network: exactly one of the digest and the wake reports each result
+ok - fm-startup-network: a claimant crash after publication still surfaces the result
+ok - fm-startup-network: a report-publication failure is failed, diagnosed, and still wakes
+ok - fm-startup-network: manual callers cannot forge mutation authority
+ok - fm-startup-network: deferred auth labels are provider neutral
+ok - fm-startup-network: an aggregate bound turns a wedged sweep into an actionable line
+ok - fm-startup-network: an abandoned run reports as needing a rerun, never as in progress forever
+ok - fm-startup-network: a second start never launches a competing worker
+ok - fm-startup-network: start atomically reserves the generation harvest observes
+ok - fm-startup-network: a new lock owner gets a distinct worker generation
+ok - fm-startup-network: fleet-lock takeover cannot overlap a mutating sweep
+ok - fm-startup-network: timing records share one origin so their offsets form a timeline
+ok - fm-startup-network: timings are durable and printed only on demand
+ok - fm-startup-network: a timed-out run still publishes the partial timings it recorded
+ok - fm-startup-network: the timing artifact cannot carry a command line or forge records
+# fm-startup-network.test.sh: all assertions passed
+exit=0
+
+$ bash tests/fm-project-origin.test.sh
+ok - ordinary clone URLs are accepted and clone with the command the remote host runs
+ok - executable transports, option-shaped values, and unusable spellings are refused
+ALL TESTS PASSED
+exit=0
