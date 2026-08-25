@@ -1,0 +1,12 @@
+Provider boundary end-to-end checks (2026-08-25)
+
+Unknown origin in deferred network phase:
+FORGE_UNSUPPORTED: unknown (host: code.example)
+
+Mixed GitHub + unknown origins in deferred network phase:
+FORGE_UNSUPPORTED: unknown (host: code.example)
+NEEDS_GH_AUTH: github.com
+
+Direct fleet-sync against unknown origin:
+output=
+fetch_attempted=no
