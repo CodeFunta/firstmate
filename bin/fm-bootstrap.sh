@@ -6,7 +6,9 @@
 #          exits 0.
 #          Silent = all good.
 #          Lines: "MISSING: <tool> (install: <command>)",
+#                 "MISSING_MANUAL: <tool> (instructions: <url>)",
 #                 "NEEDS_GH_AUTH[: <host>]", "NEEDS_GLAB_AUTH[: <host>]",
+#                 "FORGE_UNSUPPORTED: <project> (host: <host|unresolved>)",
 #                 "BACKEND_INVALID: <name> (known: <names>)",
 #                 "STARTUP_MEMORY_BUDGET: invalid config/startup-memory-budget - <reason>",
 #                 "CREW_DISPATCH: invalid config/crew-dispatch.json - <reason>",
