@@ -1,0 +1,4 @@
+fleet-sync stdout:
+fetch marker: none
+providers: github=github gitlab=gitlab local=local unknown=code.example
+missing glab auth: NEEDS_GLAB_AUTH: gitlab.example
