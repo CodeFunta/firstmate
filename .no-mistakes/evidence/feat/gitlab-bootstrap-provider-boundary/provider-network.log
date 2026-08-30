@@ -1,0 +1,20 @@
+=== fm-bootstrap-network.test.sh observed failure ===
+not ok - clone refresh did not overlap the secondmate sweeps
+START host-bravo fm-remote-doctor.sh
+START host-charlie fm-remote-doctor.sh
+START host-alpha fm-remote-doctor.sh
+END host-alpha fm-remote-doctor.sh
+END host-charlie fm-remote-doctor.sh
+END host-bravo fm-remote-doctor.sh
+START host-alpha fm-remote-secondmate-control.sh state
+START host-charlie fm-remote-secondmate-control.sh state
+END host-charlie fm-remote-secondmate-control.sh state
+END host-alpha fm-remote-secondmate-control.sh state
+START fleet-fetch git fetch
+END fleet-fetch git fetch
+START host-bravo fm-remote-secondmate-control.sh sync
+START host-alpha fm-remote-secondmate-control.sh sync
+START host-charlie fm-remote-secondmate-control.sh sync
+END host-charlie fm-remote-secondmate-control.sh sync
+END host-alpha fm-remote-secondmate-control.sh sync
+END host-bravo fm-remote-secondmate-control.sh sync
