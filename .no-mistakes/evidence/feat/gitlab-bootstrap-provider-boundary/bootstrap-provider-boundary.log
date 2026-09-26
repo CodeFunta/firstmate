@@ -1,92 +1,668 @@
-=== parallel bootstrap network output ===
-SECONDMATE_LIVENESS: secondmate bravo: skipped: remote host unavailable or endpoint state unknown; route preserved on host-bravo
-SECONDMATE_SYNC: secondmate alpha: skipped: remote tracked-file sync failed on host-alpha: synthetic tracked-file sync refusal for host-alpha
-SECONDMATE_SYNC: secondmate bravo: skipped: remote tracked-file sync failed on host-bravo: 
-SECONDMATE_SYNC: secondmate bravo: skipped: remote inheritance failed on host-bravo: 
-SECONDMATE_SYNC: secondmate charlie: skipped: remote tracked-file sync failed on host-charlie: remote secondmate checkout is dirty; sync skipped
-=== parallel remote operation timeline ===
-START host-charlie fm-remote-doctor.sh 
-START host-alpha fm-remote-doctor.sh 
-START host-bravo fm-remote-doctor.sh 
-START fleet-fetch git fetch
-END fleet-fetch git fetch
-END host-alpha fm-remote-doctor.sh 
-END host-charlie fm-remote-doctor.sh 
-END host-bravo fm-remote-doctor.sh 
-START host-alpha fm-remote-secondmate-control.sh state
-START host-charlie fm-remote-secondmate-control.sh state
-END host-charlie fm-remote-secondmate-control.sh state
-END host-alpha fm-remote-secondmate-control.sh state
-QUICK host-charlie fm-remote-secondmate-control.sh route
-QUICK host-alpha fm-remote-secondmate-control.sh route
-START host-charlie fm-remote-secondmate-control.sh sync
-START host-bravo fm-remote-secondmate-control.sh sync
-START host-alpha fm-remote-secondmate-control.sh sync
-END host-charlie fm-remote-secondmate-control.sh sync
-END host-bravo fm-remote-secondmate-control.sh sync
-END host-alpha fm-remote-secondmate-control.sh sync
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-bravo fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-=== fallback bootstrap network output ===
-SECONDMATE_LIVENESS: secondmate bravo: skipped: remote host unavailable or endpoint state unknown; route preserved on host-bravo
-SECONDMATE_SYNC: secondmate alpha: skipped: remote tracked-file sync failed on host-alpha: synthetic tracked-file sync refusal for host-alpha
-SECONDMATE_SYNC: secondmate bravo: skipped: remote tracked-file sync failed on host-bravo: 
-SECONDMATE_SYNC: secondmate bravo: skipped: remote inheritance failed on host-bravo: 
-SECONDMATE_SYNC: secondmate charlie: skipped: remote tracked-file sync failed on host-charlie: remote secondmate checkout is dirty; sync skipped
-=== fallback remote operation timeline ===
-START host-alpha fm-remote-doctor.sh 
-START fleet-fetch git fetch
-END fleet-fetch git fetch
-END host-alpha fm-remote-doctor.sh 
-START host-alpha fm-remote-secondmate-control.sh state
-END host-alpha fm-remote-secondmate-control.sh state
-QUICK host-alpha fm-remote-secondmate-control.sh route
-START host-bravo fm-remote-doctor.sh 
-END host-bravo fm-remote-doctor.sh 
-START host-charlie fm-remote-doctor.sh 
-END host-charlie fm-remote-doctor.sh 
-START host-charlie fm-remote-secondmate-control.sh state
-END host-charlie fm-remote-secondmate-control.sh state
-QUICK host-charlie fm-remote-secondmate-control.sh route
-START host-alpha fm-remote-secondmate-control.sh sync
-END host-alpha fm-remote-secondmate-control.sh sync
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-QUICK host-alpha fm-remote-inherit.sh absent
-START host-bravo fm-remote-secondmate-control.sh sync
-END host-bravo fm-remote-secondmate-control.sh sync
-QUICK host-bravo fm-remote-inherit.sh absent
-START host-charlie fm-remote-secondmate-control.sh sync
-END host-charlie fm-remote-secondmate-control.sh sync
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
-QUICK host-charlie fm-remote-inherit.sh absent
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap reports treehouse lease + tasks-axi/quota-axi bootstrap contracts
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap enforces no-mistakes minimum version
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap enforces gh-axi minimum version
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap permits nonvisual work without compatible lavish-axi and retains its presentation floor
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap applies provider-specific CLI and host-scoped auth policy
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap enforces tasks-axi minimum version
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap enforces quota-axi minimum version
+ok - bootstrap requires git with an install instruction
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap: backend=orca gates the Orca CLI without requiring it on the default backend
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap: session-provider backends require their own CLI + jq + treehouse, never tmux
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap: a session-provider backend gates its own CLI, never a false tmux requirement
+ok - bootstrap: Herdr manual-install guidance is never executed as a shell command
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap keeps origin-only local semantics and owns forge remediation
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap canonicalizes trailing-dot forge hosts
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap canonicalizes configured trailing-dot forge hosts
+ok - forge host resolver rejects invalid resolution flags
+ok - forge host resolver expands included aliases without executing SSH config commands
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap: the bundled cmux CLI satisfies the active backend dependency
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap: unknown resolved backends fail closed with an actionable diagnostic
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap: JSON-emitting backends require jq (their genuine dep), never tmux
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap: the treehouse lease check follows the resolved backend's worktree provider
+ok - bootstrap computes a fleet-size-aware default timeout and preserves partial fleet-sync output
+ok - bootstrap keeps the quick 20s default for small fleets
+ok - bootstrap preserves FM_FLEET_SYNC_BOOTSTRAP_TIMEOUT as an explicit override
+ok - bootstrap treats a blank timeout override as unset
+ok - bootstrap computes the timeout before launching fleet sync
+ok - bootstrap keeps routine tasks-axi, harness, dispatch, and already-live liveness confirmations silent
+ok - bootstrap routine contract runs under system /bin/bash
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap: FM_BOOTSTRAP_NETWORK partitions one run into local and network halves
+ok - bootstrap: every deferred mutating sweep rechecks fleet-lock ownership
+ok - bootstrap: each deferred network phase, secondmate, and clone records its own elapsed time
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap: the tasks-axi compatibility verdict travels exactly one process hop
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+ok - bootstrap surfaces active crew-dispatch rules only as verbose BOOTSTRAP_INFO
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+[rtk: No such file or directory (os error 2)]
+bash: line 27: BASH_SOURCE[0]: unbound variable
+bash: line 27: /lib.sh: No such file or directory
+bash: line 30: fm_test_tmproot: command not found
+mkdir: /forge-github-enterprise: Read-only file system
+mkdir: /forge-github-enterprise: Read-only file system
+bash: line 641: /forge-github-enterprise/home/config/backlog-backend: No such file or directory
+fatal: cannot change to '/forge-github-enterprise/home/projects/enterprise': No such file or directory
+fatal: cannot change to '/forge-github-enterprise/home/projects/enterprise': No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 646: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 654: ROOT: unbound variable
+bash: line 656: fail: command not found
+cat: /forge-github-enterprise/gh.calls: No such file or directory
+cat: /forge-github-enterprise/gh.calls: No such file or directory
+bash: line 658: fail: command not found
+mkdir: /forge-gitlab-stale-gh-axi: Read-only file system
+mkdir: /forge-gitlab-stale-gh-axi: Read-only file system
+bash: line 663: /forge-gitlab-stale-gh-axi/home/config/backlog-backend: No such file or directory
+fatal: cannot change to '/forge-gitlab-stale-gh-axi/home/projects/gitlab': No such file or directory
+fatal: cannot change to '/forge-gitlab-stale-gh-axi/home/projects/gitlab': No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 668: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 673: /glab: Read-only file system
+chmod: /glab: No such file or directory
+bash: line 679: ROOT: unbound variable
+mkdir: /forge-local-stale-gh-axi: Read-only file system
+mkdir: /forge-local-stale-gh-axi: Read-only file system
+bash: line 684: /forge-local-stale-gh-axi/home/config/backlog-backend: No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 686: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 692: ROOT: unbound variable
+mkdir: /forge-ssh-github-config: Read-only file system
+mkdir: /forge-ssh-github-config: Read-only file system
+bash: line 698: /forge-ssh-github-config/home/config/backlog-backend: No such file or directory
+fatal: cannot change to '/forge-ssh-github-config/home/projects/github-ssh': No such file or directory
+fatal: cannot change to '/forge-ssh-github-config/home/projects/github-ssh': No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 702: /ssh: Read-only file system
+chmod: /ssh: No such file or directory
+bash: line 708: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 716: ROOT: unbound variable
+cat: /forge-ssh-github-config/gh.calls: No such file or directory
+cat: /forge-ssh-github-config/gh.calls: No such file or directory
+bash: line 718: fail: command not found
+mkdir: /forge-space-project-id: Read-only file system
+mkdir: /forge-space-project-id: Read-only file system
+bash: line 724: /forge-space-project-id/home/config/backlog-backend: No such file or directory
+fatal: cannot change to '/forge-space-project-id/home/projects/project with spaces': No such file or directory
+fatal: cannot change to '/forge-space-project-id/home/projects/project with spaces': No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 729: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 736: ROOT: unbound variable
+bash: line 737: /forge-space-project-id/gh.calls: No such file or directory
+cat: /forge-space-project-id/gh.calls: No such file or directory
+bash: line 738: fail: command not found
+bash: line 740: fail: command not found
+mkdir: /forge-space-project-id: Read-only file system
+fatal: cannot change to '/forge-space-project-id/home/projects/github-two': No such file or directory
+fatal: cannot change to '/forge-space-project-id/home/projects/github-two': No such file or directory
+bash: line 745: /forge-space-project-id/gh.calls: No such file or directory
+bash: line 747: ROOT: unbound variable
+bash: line 748: /forge-space-project-id/gh.calls: No such file or directory
+cat: /forge-space-project-id/gh.calls: No such file or directory
+bash: line 749: fail: command not found
+bash: line 751: fail: command not found
+bash: line 752: pass: command not found
+mkdir: /forge-unknown: Read-only file system
+mkdir: /forge-unknown: Read-only file system
+bash: line 762: /forge-unknown/home/config/backlog-backend: No such file or directory
+fatal: cannot change to '/forge-unknown/home/projects/mystery': No such file or directory
+fatal: cannot change to '/forge-unknown/home/projects/mystery': No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 767: ROOT: unbound variable
+bash: line 769: fail: command not found
+mkdir: /forge-https-ignores-ssh-config: Read-only file system
+mkdir: /forge-https-ignores-ssh-config: Read-only file system
+bash: line 774: /forge-https-ignores-ssh-config/home/config/backlog-backend: No such file or directory
+fatal: cannot change to '/forge-https-ignores-ssh-config/home/projects/github-project': No such file or directory
+fatal: cannot change to '/forge-https-ignores-ssh-config/home/projects/github-project': No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 778: /ssh: Read-only file system
+chmod: /ssh: No such file or directory
+bash: line 784: ROOT: unbound variable
+mkdir: /forge-https-unknown-ignores-ssh-config: Read-only file system
+mkdir: /forge-https-unknown-ignores-ssh-config: Read-only file system
+bash: line 790: /forge-https-unknown-ignores-ssh-config/home/config/backlog-backend: No such file or directory
+fatal: cannot change to '/forge-https-unknown-ignores-ssh-config/home/projects/unknown-project': No such file or directory
+fatal: cannot change to '/forge-https-unknown-ignores-ssh-config/home/projects/unknown-project': No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 794: /ssh: Read-only file system
+chmod: /ssh: No such file or directory
+bash: line 800: ROOT: unbound variable
+bash: line 802: fail: command not found
+mkdir: /forge-scp-no-user: Read-only file system
+mkdir: /forge-scp-no-user: Read-only file system
+bash: line 807: /forge-scp-no-user/home/config/backlog-backend: No such file or directory
+fatal: cannot change to '/forge-scp-no-user/home/projects/github-project': No such file or directory
+fatal: cannot change to '/forge-scp-no-user/home/projects/github-project': No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 812: ROOT: unbound variable
+mkdir: /forge-local-origin: Read-only file system
+mkdir: /forge-local-origin: Read-only file system
+bash: line 818: /forge-local-origin/home/config/backlog-backend: No such file or directory
+fatal: cannot change to '/forge-local-origin/home/projects/local-project': No such file or directory
+fatal: cannot change to '/forge-local-origin/home/projects/local-project': No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 823: ROOT: unbound variable
+fatal: cannot change to '/forge-local-origin/home/projects/local-project': No such file or directory
+bash: line 827: ROOT: unbound variable
+fatal: cannot change to '/forge-local-origin/home/projects/local-project': No such file or directory
+bash: line 831: ROOT: unbound variable
+mkdir: /forge-local-only-remote: Read-only file system
+mkdir: /forge-local-only-remote: Read-only file system
+mkdir: /forge-local-only-remote: Read-only file system
+bash: line 837: /forge-local-only-remote/home/config/backlog-backend: No such file or directory
+bash: line 838: /forge-local-only-remote/home/data/projects.md: No such file or directory
+fatal: cannot change to '/forge-local-only-remote/home/projects/local-project': No such file or directory
+fatal: cannot change to '/forge-local-only-remote/home/projects/local-project': No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 844: ROOT: unbound variable
+mkdir: /forge-upstream-only: Read-only file system
+mkdir: /forge-upstream-only: Read-only file system
+bash: line 850: /forge-upstream-only/home/config/backlog-backend: No such file or directory
+fatal: cannot change to '/forge-upstream-only/home/projects/upstream-only': No such file or directory
+fatal: cannot change to '/forge-upstream-only/home/projects/upstream-only': No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 856: ROOT: unbound variable
+mkdir: /forge-gitlab: Read-only file system
+mkdir: /forge-gitlab: Read-only file system
+bash: line 862: /forge-gitlab/home/config/backlog-backend: No such file or directory
+fatal: cannot change to '/forge-gitlab/home/projects/gitlab-project': No such file or directory
+fatal: cannot change to '/forge-gitlab/home/projects/gitlab-project': No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 867: ROOT: unbound variable
+bash: line 868: assert_contains: command not found
+bash: line 870: assert_contains: command not found
+bash: line 873: /glab: Read-only file system
+chmod: /glab: No such file or directory
+bash: line 879: ROOT: unbound variable
+bash: line 881: fail: command not found
+mkdir: /forge-network-only-mixed: Read-only file system
+mkdir: /forge-network-only-mixed: Read-only file system
+mkdir: /forge-network-only-mixed: Read-only file system
+bash: line 887: /forge-network-only-mixed/home/config/backlog-backend: No such file or directory
+fatal: cannot change to '/forge-network-only-mixed/home/projects/unknown': No such file or directory
+fatal: cannot change to '/forge-network-only-mixed/home/projects/unknown': No such file or directory
+fatal: cannot change to '/forge-network-only-mixed/home/projects/github': No such file or directory
+fatal: cannot change to '/forge-network-only-mixed/home/projects/github': No such file or directory
+bash: line 47: fm_fakebin: command not found
+bash: line 48: fm_fake_exit0: command not found
+bash: line 49: fm_fake_version_tool: command not found
+bash: line 50: /gh-axi: Read-only file system
+chmod: /gh-axi: No such file or directory
+bash: line 59: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 67: /treehouse: Read-only file system
+chmod: /treehouse: No such file or directory
+bash: line 80: /no-mistakes: Read-only file system
+chmod: /no-mistakes: No such file or directory
+bash: line 113: /tasks-axi: Read-only file system
+chmod: /tasks-axi: No such file or directory
+bash: line 96: /quota-axi: Read-only file system
+chmod: /quota-axi: No such file or directory
+bash: line 893: /gh: Read-only file system
+chmod: /gh: No such file or directory
+bash: line 900: ROOT: unbound variable
+bash: line 901: assert_contains: command not found
+bash: line 903: assert_contains: command not found
+bash: line 906: pass: command not found
