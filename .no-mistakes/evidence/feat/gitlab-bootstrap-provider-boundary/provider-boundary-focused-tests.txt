@@ -1,0 +1,5 @@
+Targeted executable validation
+
+./tests/fm-fleet-sync.test.sh: exit 0; clone-root, unsupported-origin, explicit-Gerrit, and sync safety assertions passed
+./tests/fm-startup-network.test.sh: exit 0; deferred reporting, provider-neutral labels, lock authority, and timing assertions passed
+./tests/fm-bootstrap.test.sh: changed provider-boundary cases passed before the 180s broad-matrix bound

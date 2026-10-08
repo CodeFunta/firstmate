@@ -1,0 +1,25 @@
+Live disposable product checks
+
+fleet-sync unsupported origin:
+LIVE_FLEET_SYNC_UNSUPPORTED_OUTPUT=
+LIVE_FLEET_SYNC_HEAD_UNCHANGED=yes
+
+bootstrap GitLab-only:
+NEEDS_GLAB_AUTH: gitlab.example
+LIVE_GITLAB_ONLY_NO_GITHUB_REQUIREMENT=yes
+
+bootstrap unknown origin:
+FORGE_UNSUPPORTED: mystery (host: code.example)
+LIVE_BOOTSTRAP_UNKNOWN_ORIGIN_FAILS_CLOSED=yes
+
+startup deferred report:
+completed off the startup path in 1s: registered-forge authentication.
+NEEDS_GLAB_AUTH: gitlab.example
+
+nested directory provider boundary:
+LIVE_NESTED_DIRECTORY_BOOTSTRAP_OUTPUT=
+LIVE_NESTED_DIRECTORY_DOES_NOT_INHERIT_PROVIDER=yes
+
+malformed multi-dot host:
+FORGE_UNSUPPORTED: malformed-host (host: github.com...)
+LIVE_MULTI_TRAILING_DOT_REJECTED=yes
