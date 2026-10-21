@@ -885,7 +885,7 @@ secondmate_handoff_detect() {
 
 install_cmd() {
   case "$1" in
-    tmux|node|git|gh|glab|curl|jq|orca|zellij) echo "brew install $1  # or the platform's package manager" ;;
+    tmux|node|git|gh|glab|tea|curl|jq|orca|zellij) echo "brew install $1  # or the platform's package manager" ;;
     cmux) echo "brew install --cask cmux  # or see https://cmux.com" ;;
     treehouse) echo "curl -fsSL https://kunchenguid.github.io/treehouse/install.sh | sh" ;;
     no-mistakes) echo "curl -fsSL https://raw.githubusercontent.com/kunchenguid/no-mistakes/main/docs/install.sh | sh" ;;
@@ -1713,7 +1713,7 @@ if network_phase; then
   while IFS=$'\t' read -r _proj_id _proj_provider _proj_host; do
     [ -n "${_proj_provider:-}" ] || continue
     case "$_proj_provider" in
-      github|gitlab|gerrit) : ;;
+      github|gitlab|gerrit|forgejo|external) : ;;
       *) continue ;;
     esac
     _pair="$_proj_provider:${_proj_host:-}"
