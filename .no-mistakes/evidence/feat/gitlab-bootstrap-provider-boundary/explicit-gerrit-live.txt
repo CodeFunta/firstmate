@@ -1,0 +1,16 @@
+Live explicit Gerrit provider validation
+Bootstrap missing-tool output:
+MISSING: gerrit-axi (install: npm install -g gerrit-axi)
+Bootstrap after gerrit-axi: <silent>
+Fleet-sync output:
+sync-gerrit: synced 6eb530e..b134b4b
+Assertions: no FORGE_UNSUPPORTED/NEEDS_GH_AUTH; gh auth log empty; sync-gerrit fast-forwarded to origin/main.
+Unsupported-origin bootstrap output:
+MISSING: treehouse (install: curl -fsSL https://kunchenguid.github.io/treehouse/install.sh | sh)
+MISSING: no-mistakes (install: curl -fsSL https://raw.githubusercontent.com/kunchenguid/no-mistakes/main/docs/install.sh | sh)
+PRESENTATION_UNAVAILABLE: lavish-axi (requires >=0.1.77; install: npm install -g lavish-axi && lavish-axi setup hooks) - nonvisual work may proceed with plain-text decisions and reports; install or upgrade before using Lavish
+MISSING: quota-axi (install: npm install -g quota-axi)
+MISSING: tasks-axi (install: npm install -g tasks-axi)
+FORGE_UNSUPPORTED: mystery (host: code.example)
+Fleet-sync output: <silent>
+State oracle: HEAD/refs/worktree unchanged; gh auth log empty.
