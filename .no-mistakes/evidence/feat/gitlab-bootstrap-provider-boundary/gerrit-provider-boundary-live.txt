@@ -1,0 +1,7 @@
+=== bootstrap with Gerrit origin but no explicit binding ===
+FORGE_UNSUPPORTED: gerrit-project (host: review.example)
+=== direct fleet-sync with binding removed ===
+(silent: unsupported origin skipped)
+HEAD before: 6f0dc7e4c2833a421689367bdae696ae8e58d21f
+HEAD after:  6f0dc7e4c2833a421689367bdae696ae8e58d21f
+RESULT: unbound Gerrit origin failed closed and fleet-sync left the clone unchanged without invoking transport.

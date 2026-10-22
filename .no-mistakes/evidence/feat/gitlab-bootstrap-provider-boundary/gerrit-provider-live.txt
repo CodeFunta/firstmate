@@ -1,0 +1,9 @@
+=== bootstrap with gerrit-axi absent ===
+MISSING: gerrit-axi (install: npm install -g gerrit-axi)
+=== bootstrap with gerrit-axi present ===
+(silent: no provider/auth diagnostic)
+=== direct fleet-sync with explicit forge=gerrit ===
+gerrit-project: synced 02360b9..eaed242
+HEAD before: 02360b9652da3594b8cc98da713752e0316fc856
+HEAD after:  eaed242f6eaf4fd64a8b54e26c51010477ab1eb7
+RESULT: explicit Gerrit binding required gerrit-axi, skipped GitHub auth, and allowed clone sync.
