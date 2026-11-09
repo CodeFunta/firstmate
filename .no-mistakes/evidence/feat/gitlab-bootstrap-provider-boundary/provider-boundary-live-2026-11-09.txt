@@ -1,0 +1,35 @@
+LIVE PROVIDER-BOUNDARY VALIDATION (fresh disposable fixtures)
+--- explicit Gerrit, gerrit-axi absent ---
+MISSING: gerrit-axi (install: npm install -g gerrit-axi)
+gh_calls=
+--- explicit Gerrit, gerrit-axi present ---
+<silent>
+gh_calls=
+--- explicit Gerrit, fleet-sync ---
+gerrit-project: synced e1d064f..d795f77
+head_before=e1d064f4d60f3b0d680b5dde4fc85471d069e01c
+head_after=d795f77d556e345477f3cc70c7caf50e41fef53a
+origin_head=d795f77d556e345477f3cc70c7caf50e41fef53a
+--- unknown origin, bootstrap ---
+FORGE_UNSUPPORTED: mystery (host: code.example)
+--- unknown origin, fleet-sync ---
+<silent>
+--- host boundary ---
+MISSING: gh-axi (install: npm install -g gh-axi && gh-axi setup hooks)
+FORGE_UNSUPPORTED: multi (host: github.com...)
+NEEDS_GH_AUTH: github.com
+gh_calls=auth status --hostname github.com 
+--- legacy explicit bindings ---
+MISSING: tea (install: brew install tea  # or the platform's package manager)
+gh_calls=
+RESULT: fresh live provider-boundary scenarios passed.
+--- same-basename binding scope ---
+<silent>
+foreign_before=a572941859c0afa9ca00edd48c9d62f6903df700
+foreign_after=a572941859c0afa9ca00edd48c9d62f6903df700
+--- registered symlink binding identity ---
+symlinked: synced 46ae9c3..eae8ddb
+head_before=46ae9c37dbe0528c10788dbea42c597e93dc11fb
+head_after=eae8ddb4c7512a6eb38f5f60a56e902aa9872367
+origin_head=eae8ddb4c7512a6eb38f5f60a56e902aa9872367
+RESULT: canonical binding scope and symlink identity checks passed.
