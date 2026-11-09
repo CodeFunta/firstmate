@@ -1,0 +1,12 @@
+1..9
+ok - bootstrap classifies Git remotes by their effective insteadOf destination
+ok - forge SSH resolution preserves user-before-system precedence
+ok - bootstrap honors explicit Gerrit provider bindings
+ok - bootstrap preserves explicit Forgejo and external bindings
+ok - bootstrap preserves local-only forge posture refusals
+ok - bootstrap applies provider-specific CLI and host-scoped auth policy
+ok - bootstrap canonicalizes valid trailing-dot hosts and rejects malformed ones
+ok - bootstrap canonicalizes configured trailing-dot forge hosts
+ok - forge host resolver expands included aliases without executing SSH config commands
+FM_TEST_COMPLETE
+ok - nested directory did not inherit parent forge requirements
